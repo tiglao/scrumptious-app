@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Scrumptious Recipes
+{% endblock title %}
+
+{% block content %}
+        <h1>Scrumptious Recipes</h1>
+        <h2>All the food that's fit to eat</h2>
+        <div class="recipe-gallery">
+            {% for recipe in recipe_list %}
+            <div>
+                <h3>
+                <a href="{% url 'show_recipe' recipe.id %}">{{ recipe.title }}</a>
+                </h3>
+                <img src="{{ recipe.picture }}">
+                <div>4.3 stars</div>
+                <P>{{recipe.created_on|date:"F j, Y"}}</P>
+            </div>
+            {% empty %}
+                <P>there are no recipes.</P>
+            {% endfor %}
+        </div>
+{% endblock content %}

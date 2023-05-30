@@ -1,0 +1,126 @@
+/*Go to Google Fonts , find the font named Roboto, select the "Regular 400" version, and make your Web pages use it by adding it as the first line of your CSS file with an @import statement. (Don't use the link tags.)*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Search Mozilla Developer Network 's documentation to figure out how to remove the underline on the anchor tags.*/
+a {
+    text-decoration: none;
+    /*remove underline from tags*/
+    transition: color 1s;
+
+}
+
+a:active {
+    color: hsl(149, 47%, 43%);
+}
+
+a:link {
+    color: hsl(149, 47%, 43%);
+}
+
+a:visited {
+    color: hsl(37, 66%, 45%)
+}
+
+a:hover {
+    color: hsl(37, 47%, 25%);
+}
+
+a.nav {
+    font-size: 110%;
+}
+
+/*Investigate the CSS :hover pseudo-class. Use it in a CSS rule that changes the text color of anchor tags to green when you hover over them.*/
+a.nav:active {
+    color: hsl(37, 47%, 93%);
+}
+
+a.nav:link {
+    color: hsl(37, 47%, 93%);
+}
+
+a.nav:visited {
+    color: hsl(37, 47%, 93%);
+}
+
+a.nav:hover {
+    color: hsl(35, 64%, 23%);
+}
+
+h1 {
+    color: hsl(149, 47%, 22%);
+
+}
+
+th {
+    font-weight: bold;
+    font-size:110%;
+}
+
+tr:nth-child(even) {
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+img {
+    height: 200px;
+}
+
+
+html {
+    height: 100%; /*sticky-footer*/
+}
+
+head {
+    background-color: hsl(0, 0%, 0%);
+}
+
+nav {
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 0%);
+    background-color: hsl(37, 73%, 59%);
+    padding: 20px 0 16px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%; /*sticky-footer*/
+    padding: 0;
+    margin: 0;
+    display: flex; /*sticky-footer*/
+    flex-direction: column; /*sticky-footer*/
+}
+
+.wrapper {
+    min-height: 100%;/*sticky-footer*/
+    display: flex; /*sticky-footer*/
+    flex-direction: column; /*sticky-footer*/
+}
+.page-body {
+    flex-grow: 1; /*sticky-footer*/
+}
+
+main {
+    padding: 100px;
+}
+
+main div {
+    padding: 10px;
+}
+
+.main-footer {
+    background-color: hsl(149, 47%, 22%);
+    color: hsl(37, 47%, 93%);
+    padding: 20px 20px;
+    bottom: 0;
+    height: 50px;
+}
+
+.recipe-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%
+}

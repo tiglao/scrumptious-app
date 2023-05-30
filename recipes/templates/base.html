@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <header class="main-header">
+        <nav>
+            <a class="nav" href="{% url 'recipe_list' %}">Main page</a>
+            <a class="nav" href="{% url 'create_recipe' %}">Create a recipe</a>
+        </nav>
+    </header>
+    <title>{% block title %} - Scrumptious Recipes{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/recipes.css" %}">
+
+</head>
+
+<body>
+    <main class="page-body">
+        {% block content %} {% endblock content %}
+    </main>
+
+    <footer class="main-footer">
+        Made with love by Scrumptious Recipes
+    </footer>
+    </div>
+
+</body>
